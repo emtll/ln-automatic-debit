@@ -53,8 +53,9 @@ name = "<message>"
 # Day you want to execute the payment every month. Default: 1
 check_day = 1
 ```
+### 2. Exit saving: ctrl+x, y, enter
 
-### 2. Run the script:
+### 3. Run the script:
 ```
 python3 app.py
 ```

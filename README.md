@@ -64,6 +64,11 @@ To run the script as a systemd service for automatic execution:
 
 ### 1. Create a systemd service file automatic-debit.service:
 ```
+sudo nano /etc/systemd/system/automatic-debit.service
+```
+
+### 2. Copy and paste the following content:
+```
 [Unit]
 Description=Automatic Payment Service
 
@@ -77,16 +82,16 @@ StandardError=journal
 [Install]
 WantedBy=multi-user.target
 ```
+### 3. Exit saving: ctrl+x, y, enter
 
-### 2. Save the file and enable the service:
+### 4. Save the file and enable the service:
 ```
-sudo cp pay-to-jvx.service /etc/systemd/system/
 sudo systemctl daemon-reload
 sudo systemctl enable automatic-debit.service
 sudo systemctl start automatic-debit.service
 ```
 
-### 3. Check the service status:
+### 5. Check the service status:
 ```
 sudo systemctl status automatic-debit.service
 ```

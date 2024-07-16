@@ -8,7 +8,7 @@ This Python script automates monthly payments using LNBits wallets. It creates a
   ``` (pip install requests)```
 * Ensure payment_status_file path exists and is writable
 
-# 1. Clone this repository:
+# Clone this repository:
 ```git clone https://github.com/emtll/ln-automatic-debit.git```
 
 # Configuration

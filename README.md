@@ -14,6 +14,7 @@ This Python script automates monthly payments using LNBits wallets. It creates a
 # Configuration
 
 ```cd ln-automatic-debit```
+
 ```sudo nano app.py```
 
 ### 1. Before running the script, modify the variables in app.py to suit your environment:

@@ -39,7 +39,7 @@ name = "<message>"
 check_day = 1
 ```
 
-# 3. Run the script:
+### 2. Run the script:
 ```
 python3 app.py
 ```

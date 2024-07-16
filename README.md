@@ -18,7 +18,7 @@ git clone https://github.com/emtll/ln-automatic-debit.git
 # Configuration
 
 ```
-cd ln-automatic-debit
+cd ln-automatic-debit/
 ```
 
 ```
@@ -104,7 +104,7 @@ journalctl -fu automatic-debit
 
 # Upgrade
 ```
-cd ln-automatic-debit
+cd ln-automatic-debit/
 ```
 
 ```

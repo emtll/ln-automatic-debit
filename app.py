@@ -108,7 +108,7 @@ def main():
         # Check if it's the 1st day of the month and payment hasn't been done today
         if is_first_day_of_month() and not is_payment_done_today():
             # Create invoice
-            invoice = create_invoice(api_key_create, amount_usd, memo, unit, expiry)
+            invoice = create_invoice(api_key_create, amount_pay, memo, unit, expiry)
             if invoice:
                 print(f"Invoice created successfully: {invoice}")
                 

@@ -5,7 +5,7 @@ This Python script automates monthly payments using LNBits wallets. It creates a
 
 * Python 3.x installed
 * Requests module installed:
-  ``` (pip install requests)```
+  ```pip install requests```
 * Ensure payment_status_file path exists and is writable
 
 # Clone this repository:

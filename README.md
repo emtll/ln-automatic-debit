@@ -1,7 +1,7 @@
 # LN Automatic Debit
 This Python script automates monthly payments using LNBits wallets. It creates an invoice on a specified day of each month and pays it if not already paid.
 
-#Prerequisites:
+# Prerequisites:
 
 * Python 3.x installed
 * Requests module installed:
@@ -10,7 +10,7 @@ This Python script automates monthly payments using LNBits wallets. It creates a
 
 # Configuration
 
-###1. Before running the script, modify the variables in app.py to suit your environment:
+### 1. Before running the script, modify the variables in app.py to suit your environment:
 ```
 # File path to store payment logs
 payment_status_file = "/path/to/payment_logs.txt"
@@ -39,7 +39,7 @@ name = "<message>"
 check_day = 1
 ```
 
-#3. Run the script:
+# 3. Run the script:
 ```
 python3 app.py
 ```
@@ -47,7 +47,7 @@ python3 app.py
 # Systemd Service
 To run the script as a systemd service for automatic execution:
 
-###1. Create a systemd service file automatic-debit.service:
+### 1. Create a systemd service file automatic-debit.service:
 ```
 [Unit]
 Description=Automatic Payment Service
@@ -63,7 +63,7 @@ StandardError=journal
 WantedBy=multi-user.target
 ```
 
-###2. Save the file and enable the service:
+### 2. Save the file and enable the service:
 ```
 sudo cp pay-to-jvx.service /etc/systemd/system/
 sudo systemctl daemon-reload
@@ -71,7 +71,7 @@ sudo systemctl enable automatic-debit.service
 sudo systemctl start automatic-debit.service
 ```
 
-###3. Check the service status:
+### 3. Check the service status:
 ```
 sudo systemctl status automatic-debit.service
 ```

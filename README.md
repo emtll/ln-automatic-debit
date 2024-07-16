@@ -1,5 +1,5 @@
 # LN Automatic Debit
-This Python script automates monthly payments using LNBits wallets. It creates an invoice on a specified day of each month and pays it if not already paid.
+This Python script automates monthly payments using LNBits wallets. It creates an invoice on a specified day of each month and pays it if not already paid. Payment hashes are saved in a separate file with their timestamps for verification. Useful tool for paying service subscriptions.
 
 # Prerequisites:
 

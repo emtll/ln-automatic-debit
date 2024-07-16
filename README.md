@@ -44,7 +44,7 @@ amount_pay = "<amount>"
 # Invoice unit of account (e.g., sat, usd, eur, etc.)
 unit = "<unit>"
 
-# Invoice duration time until expiration
+# Invoice duration time until expiration (seconds).
 expiry = "<time>"
 
 # Message to include in payment. You can leave it blank ex: ""

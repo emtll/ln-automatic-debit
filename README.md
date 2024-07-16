@@ -101,3 +101,12 @@ Check the logs with:
 ```
 journalctl -fu automatic-debit
 ```
+
+# Upgrade
+```
+cd ln-automatic-debit
+```
+
+```
+git pull
+```

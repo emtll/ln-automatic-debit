@@ -39,7 +39,7 @@ urlp = "https://<LNBits_wallet_domain>/api/v1/payments"
 api_key_pay = "<admin_key>"
 
 # Amount to pay monthly. It depends on the unit of account you choose
-amount_usd = "<amount>"
+amount_pay = "<amount>"
 
 # Invoice unit of account (e.g., sat, usd, eur, etc.)
 unit = "<unit>"

@@ -10,7 +10,7 @@ import logging
 
 logging.basicConfig(level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
 
-#                           PLEASE MODIFY THE VARIABLES BELOW FOR YOUR USE CASE: 
+#                           PLEASE MODIFY THE VARIABLES BELOW FOR YOUR USE CASE:
 #_______________________________________________________________________________________________________________#
 payment_status_file = "/path/to/payment_logs.txt" # File path to store payment logs                             |
 urlc = "https://<LNBits_wallet_domain>/api/v1/payments" # Recipent LNBits wallet URL                            |
@@ -36,10 +36,10 @@ def create_invoice(api_key, amount, memo, unit, expiry):
         "memo": memo,
         "unit": unit,
         "expiry": expiry,
-        "webhook": "", 
+        "webhook": "",
         "internal": False
     }
-    
+
     response = requests.post(urlc, json=payload, headers=headers)
     if response.status_code == 201:
         data = response.json()
@@ -59,7 +59,7 @@ def pay_invoice(api_key, bolt11):
         "out": True,
         "bolt11": bolt11
     }
-    
+
     response = requests.post(urlp, json=payload, headers=headers)
     if response.status_code == 201:
         data = response.json()
@@ -111,7 +111,7 @@ def main():
             invoice = create_invoice(api_key_create, amount_usd, memo, unit, expiry)
             if invoice:
                 print(f"Invoice created successfully: {invoice}")
-                
+
                 # Pay invoice and check status
                 payment_hash = pay_invoice(api_key_pay, invoice)
                 if payment_hash:
@@ -123,7 +123,7 @@ def main():
                     logging.error("Failed to pay invoice.")
             else:
                 logging.error("Failed to create invoice.")
-        
+
         # Wait 1 hour before checking again
         logging.info(f"Waiting until the next day {check_day} of the month...")
         time.sleep(60 * 60)

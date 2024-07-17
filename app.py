@@ -20,7 +20,7 @@ api_key_pay = "<admin_key>" # Payer LNBits wallet admin key                     
 amount_pay = "<amount>" # Amount to pay monthly. It depends on the unit of account you choose                   |
 name = "<message>" # Message to include in payment. You can leave it blank ex: ""                               |
 unit = "<unit>" # Invoice unit of account (e.g. sat, usd, eur, etc.)                                            |
-expiry = "<time>" # Invoice duration time until expiration                                                      |
+expiry = "<time>" # Invoice duration time until expiration (seconds)                                            |
 check_day = 1 # Day you want to execute the payment every month. Default: 1                                     |
 #_______________________________________________________________________________________________________________#
 
@@ -108,7 +108,7 @@ def main():
         # Check if it's the 1st day of the month and payment hasn't been done today
         if is_first_day_of_month() and not is_payment_done_today():
             # Create invoice
-            invoice = create_invoice(api_key_create, amount_usd, memo, unit, expiry)
+            invoice = create_invoice(api_key_create, amount_pay, memo, unit, expiry)
             if invoice:
                 print(f"Invoice created successfully: {invoice}")
 
